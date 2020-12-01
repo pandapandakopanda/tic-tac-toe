@@ -2,11 +2,16 @@ import {computed, observable,action} from 'mobx'
 
 class Store {
   @observable page = 'start'
+  @observable player = true
 
-  @action setPage = () => {
-    if(this.page === 'start') this.page = 'main'
-    else if(this.page === 'main') this.page = 'end'
+  @action setPage = (page) => {
+    this.page = page
   }
+
+  @action nextPlayer = () =>  {
+    this.player = !this.player
+  }
+
 }        
 
 

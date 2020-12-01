@@ -4,19 +4,16 @@ import Start from './Start'
 import End from './End'
 import Main from './Main'
 import Button from './ui/Button'
+import ST from './index.scss'
 
 
 @inject('store')
 @observer
 class App extends React.Component {
-
-  setPage = () => {
-    this.props.store.setPage()
-  }
-
+  
   render(){
     const {page} = this.props.store 
-    
+
     const showPage = () => {
        switch(page) {
         case 'start': return <Start />
@@ -26,10 +23,9 @@ class App extends React.Component {
     }
 
     return(
-      <div>
-        {showPage()}
-        <Button onClickHandler={this.setPage}/>
-      </div>
+        <div className={ST.wrapper}>
+          {showPage()}
+        </div>
     )
   }
 }

@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Major+Mono+Display&family=Oswald:wght@700&display=swap');
+
+.cell {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 100px;
+  background-color: rgb(241, 226, 241);
+  border-radius: 2px;
+  cursor: pointer;
+  user-select: none;
+  margin: 1px;
+  font-family: 'Major Mono Display', monospace;
+}
