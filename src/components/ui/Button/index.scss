@@ -3,12 +3,32 @@
   justify-content: center;
   align-items: center;
   width: 100px;
-  height: 20px;
-  border: 1px solid transparent;
+  height: 40px;
   border-radius: 4px;
   box-sizing: border-box;
   cursor: pointer;
   user-select: none;
-  background-color: rgb(241, 226, 241);
-  color: rgb(128, 69, 128);
+  background: linear-gradient(45deg, rgb(177, 118, 177) 0%, rgb(236, 222, 222) 100%);
+  border: none;
+  color: rgb(236, 222, 222);
+
+  &:hover {
+    animation: gradientAnimation .8s 1 ease-out;
+    background: linear-gradient(45deg, rgb(177, 118, 177) 0%, rgb(236, 222, 222) 100%);
+    color: rgb(177, 118, 177);
+  }
+
+  @keyframes gradientAnimation {
+    from {background: linear-gradient(45deg, rgb(177, 118, 177) 0%, rgb(236, 222, 222) 0%)}
+    10% {background: linear-gradient(45deg, rgb(177, 118, 177) 0%, rgb(236, 222, 222) 20%)}
+    20% {background: linear-gradient(45deg, rgb(177, 118, 177) 0%, rgb(236, 222, 222) 40%)}
+    30% {background: linear-gradient(45deg, rgb(177, 118, 177) 0%, rgb(236, 222, 222) 60%)}
+    40% {background: linear-gradient(45deg, rgb(177, 118, 177) 0%, rgb(236, 222, 222) 80%)}
+    50% {background: linear-gradient(45deg, rgb(177, 118, 177) 0%, rgb(236, 222, 222) 100%)}
+    60% {background: linear-gradient(45deg, rgb(177, 118, 177) 0%, rgb(236, 222, 222) 80%)}
+    70% {background: linear-gradient(45deg, rgb(177, 118, 177) 0%, rgb(236, 222, 222) 60%)}
+    80% {background: linear-gradient(45deg, rgb(177, 118, 177) 0%, rgb(236, 222, 222) 40%)}
+    90% {background: linear-gradient(45deg, rgb(177, 118, 177) 0%, rgb(236, 222, 222) 20%)}
+    to  {background: linear-gradient(45deg, rgb(177, 118, 177) 0%, rgb(236, 222, 222) 0%)} 
+  }
 }

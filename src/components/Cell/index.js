@@ -20,8 +20,9 @@ class Cell extends React.Component {
 
   render(){
     
+    const classname = (this.state.isEnable)?ST.cell : ST['cell_disable']
     return(
-      <div className={ST.cell} onClick={this.onCLickHandler}>
+      <div className={classname} onClick={this.onCLickHandler}>
         {this.state.fill}
       </div>
     )
