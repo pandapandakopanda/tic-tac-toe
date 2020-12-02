@@ -5,12 +5,42 @@
 }
 
 .start_h1 {
+  margin-bottom: 50px;
+  padding: 15px;
   user-select: none;
+  border: 2px solid white;
+  border-top: transparent;
   text-decoration: underline;
-  background: linear-gradient(rgb(133, 72, 133), rgb(236, 222, 222));
+  background: linear-gradient(rgb(160, 54, 160), rgb(255, 255, 255));
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   color: red;
-  text-shadow: 0px 0px 30px rgb(255, 255, 255);
+  box-shadow: inset 0px 0px 10px 1px white,
+              0px 0px 10px 5px white;
+  animation: shadowAnimate 1.5s infinite ease,
+              borderAnimate 1.5s infinite ease;
+
+}
+
+
+@keyframes shadowAnimate {
+  from {box-shadow: inset 0px 0px 5px 1px white,
+                    0px 0px 10px 5px white}
+  50% {box-shadow: inset 0px 0px 15px 5px white,
+                    0px 0px 20px 10px white}
+  to {box-shadow: inset 0px 0px 5px 1px white,
+                    0px 0px 10px 5px white}
+}
+
+@keyframes borderAnimate {
+  from {border-top: 2px solid transparent}
+  25% {border-top: 2px solid white;
+      border-left: 2px solid transparent}
+  50% {border-left: 2px solid white;
+      border-bottom: 2px solid transparent}
+  75% {border-bottom: 2px solid white;
+      border-right: 2px solid transparent}
+  to {border-right: 2px solid white;
+      border-top: 2px solid transparent}
 }

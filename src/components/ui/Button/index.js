@@ -14,7 +14,7 @@ class Button extends React.Component {
       className={ST.button}
       onClick={this.onClick}
       >
-        Start
+        {this.props.name}
       </div>
     )
   }

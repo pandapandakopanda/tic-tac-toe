@@ -4,6 +4,7 @@ class Store {
   @observable page = 'start'
   @observable player = true
 
+
   @action setPage = (page) => {
     this.page = page
   }
@@ -11,6 +12,8 @@ class Store {
   @action nextPlayer = () =>  {
     this.player = !this.player
   }
+
+  
 
 }        
 

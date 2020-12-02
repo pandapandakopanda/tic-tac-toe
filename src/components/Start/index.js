@@ -15,7 +15,7 @@ class Start extends React.Component {
 
       <div className={ST.start}>
         <h1 className={ST.start_h1}>Press start button</h1>
-        <Button onClickHandler={this.onClick}/>
+        <Button name='Start' onClickHandler={this.onClick}/>
       </div>
 
     )
